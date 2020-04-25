@@ -44,11 +44,11 @@ class L2Normalization(Layer):
     '''
 
     def __init__(self, gamma_init=20, **kwargs):
-        if K.common.image_dim_ordering() == 'tf':
-            self.axis = 3
-        else:
-            self.axis = 1
-        self.gamma_init = gamma_init
+        #if K.common.image_dim_ordering() == 'tf':
+        self.axis = 3
+        #else:
+            #self.axis = 1
+        #self.gamma_init = gamma_init
         super(L2Normalization, self).__init__(**kwargs)
 
     def build(self, input_shape):
